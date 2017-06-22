@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Boilerplate - Template </title>
-	<script src="js/angular.min.js"></script>  
+	<script src="js/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+	  <script src="js/app.js"></script>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
@@ -18,23 +21,17 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body ng-app="myApp" >
-    <h1>Angular JS 1.5 Boilerplate HTML Template</h1>
-    <p>You can start working on the template you want to design from here.</p>
-	  <div w3-test-directive></div>
-	  
+  <body ng-app="myApp">
+	<div class="container">
+    <a href="#!login">Login</a>
+	<a href="#!signup">Sign Up</a>
 
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <!-- Common JS for common controls and functions -->
-    <script src="js/common.js"></script>   
-	  <script>
-		var app = angular.module('myApp', []);
-		app.directive("w3TestDirective", function() {
-			return {
-				template : "I was made in a directive constructor!"
-			};
-		});
-	  </script>
+	<p>Click on the links to change the content.</p>
+
+	<p>Use the "otherwise" method to define what to display when none of the links are clicked.</p>
+
+	<div ng-view></div>
+	</div>
+	  
   </body>
 </html>
