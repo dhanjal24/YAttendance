@@ -18,15 +18,23 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body ng-app>
+  <body ng-app="myApp" >
     <h1>Angular JS 1.5 Boilerplate HTML Template</h1>
     <p>You can start working on the template you want to design from here.</p>
-	  <input type="text" ng-model="name" />
-	  <span ng-bind="name"></span>
+	  <div w3-test-directive></div>
+	  
 
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
     <!-- Common JS for common controls and functions -->
     <script src="js/common.js"></script>   
+	  <script>
+		var app = angular.module('myApp', []);
+		app.directive("w3TestDirective", function() {
+			return {
+				template : "I was made in a directive constructor!"
+			};
+		});
+	  </script>
   </body>
 </html>
